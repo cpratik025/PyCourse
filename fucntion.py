@@ -1,5 +1,6 @@
 
 #Positional Arguments, data will be displayed as per the position of argument
+#Positional Argument practice is a better one
 def say_something(name):
         print(f'The name provided is {name}')
 
