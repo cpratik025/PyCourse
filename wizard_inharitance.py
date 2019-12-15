@@ -21,7 +21,7 @@ class Archer(User):
         self.name = name
         self.no_arrows = no_arrows
 
-    def Arattack(self):
+    def no_of_arrows(self):
         print(f"Attacking with arrows {self.no_arrows}")
 
     def run(self):
@@ -41,7 +41,7 @@ archer1= Archer('Laxman',30)
 hyd = Hybrid('Pratik',50,100)
 print(hyd.run())
 print(hyd.attack())
-print(hyd.Arattack())
+print(hyd.no_arrows())
 #wizard1.attack()
 #archer1.attack()
 #print(wizard1.email)
