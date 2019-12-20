@@ -1,5 +1,6 @@
 from functools import reduce
 
+lambda parameter:action(parameter)
 #1 Capitalize all of the pet names and print the list
 my_pets = ['sisi', 'bibi', 'titi', 'carla']
 def caps(item):

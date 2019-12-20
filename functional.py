@@ -1,5 +1,7 @@
 #map,zip,reduce and filter
 from functools import reduce
+
+
 mylist=[1,2,3,4]
 mylist1=[10,20,30,40]
 def multiply_2(li):
@@ -22,3 +24,12 @@ print(mylist )
 
 #Filters out the even no from the odd
 print(list(filter(checkodd,mylist)))
+
+#lambda fuction can be used to perform a action that you only want to perform once and dont want
+#to code a complete function for it as as example of multiply by 2 function above if we want we
+#can assign is using lambda function
+print(list(map(lambda item: item*2,mylist)))
+#same way it can be used for filter
+print(list(filter(lambda item: item %2!=0,mylist)))
+
+print(reduce(lambda acc,item: acc+item,mylist))
