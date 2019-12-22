@@ -6,18 +6,21 @@
 #Below we have create a myfuct decorator that has funct as a parameter and that myfuct has another function that enhances the provided function
 #When we use @myfuct with hello that hello is passed as a parameter to the myfuct decorator
 def myfuct(funct):
-    def wrapfunct():
+    def wrapfunct(*args,**kwargs):
         print('*********')
-        funct()
+        funct(*args,**kwargs)
         print('***********')
     return wrapfunct
 
-@myfuct
+#@myfuct
 def hello():
     print('Hello')
-@myfuct
+#@myfuct
 def bye():
     print('See you later')
-
+@myfuct
+def hello2(greeting):
+    print(greeting)
 hello()
 bye()
+hello2('Pratik')
