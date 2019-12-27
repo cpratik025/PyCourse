@@ -2,6 +2,8 @@ while True:
     try:
         age = int(input('Please Input Your Age: '))
         print(age)
+        #This raise over rides the call done after
+        raise ValueError('Hey Cut it out')
     except ValueError as err:
         print('Invalid Input:Please Enter Age in No'+err)
         #Continue sends the pointer back to start of program if the error is encountered
