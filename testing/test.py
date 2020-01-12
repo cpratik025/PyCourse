@@ -17,6 +17,15 @@ class test_main(unittest.TestCase):
     def test_do2(self):
         test_num ='abcded'
         result = main.do(test_num)
-        self.assertEqual(result, 15)
-
-unittest.main()
+        #self.assertTrue(isinstance(result, ValueError))
+        self.assertIsInstance(result,ValueError)
+    def test_do4(self):
+        test_num =None
+        result = main.do(test_num)
+        self.assertEqual(result, 'Return a no')
+    def test_do5(self):
+        test_num =''
+        result = main.do(test_num)
+        self.assertEqual(result, 'Return a no')
+if __name__ == '__main__':
+    unittest.main()

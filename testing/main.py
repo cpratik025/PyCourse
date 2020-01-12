@@ -1,2 +1,11 @@
 def do(num):
-    return num + 5
+    try:
+        if num:
+            return int(num) + 5
+        else:
+            print('Return a no')
+    except ValueError as err:
+        return err
+    except ValueError as err:
+        return err
+
