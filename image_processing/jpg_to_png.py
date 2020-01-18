@@ -6,9 +6,12 @@ from PIL import Image
 source = sys.argv[1]
 target = sys.argv[2]
 #check if folder exists if not create it
-if os.path.isdir('new') == False:
-    os.mkdir('new')
+if os.path.isdir(target) == False:
+    os.mkdir(target)
 #loop through entire folder and convert jpg to png
-for files in os.listdir(sys.argv[1]):
-    image = Image.open(f'{source}')
-    image.save(f'{target}{files}.png','png')
+for files in os.listdir(source):
+    image = Image.open(f'{source}/{files}')
+    new_name = os.path.splitext(files) [0]
+    print(new_name)
+    image.save(f'{target}/{new_name}.png','png')
+    print('Done')
