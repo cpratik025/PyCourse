@@ -11,7 +11,8 @@ if os.path.isdir(target) == False:
 #loop through entire folder and convert jpg to png
 for files in os.listdir(source):
     image = Image.open(f'{source}/{files}')
+    #Splits the file name into filename and extention
     new_name = os.path.splitext(files) [0]
     print(new_name)
     image.save(f'{target}/{new_name}.png','png')
-    print('Done')
+print('Done')
